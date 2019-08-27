@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = ViewData["Game"];
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="container-body">
+        <p class="main-text-color">@ViewData["Game"]</p>
+        <hr />
+        <div class="row">
+            <div class="col-md-9">
+                <p>@ViewData["Description"]</p>
+            </div>
+            <div class="col-md-3">
+                <img src="@Url.Content("~/" + @ViewData["Image"].ToString())" style="width:90%;" />
+                <span class="text-color">Разработчик: </span>@ViewData["Dev"]<br />
+                <span class="text-color">Жанр:</span> @ViewData["Genre"]<br />
+                <span class="text-color">Рейтинг: </span>@ViewData["Rathing"]<br />
+                <span class="text-color">Дата выхода: </span>@ViewData["Release"]
+            </div>
+        </div>
+    </div>
+</div>

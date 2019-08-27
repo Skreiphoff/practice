@@ -1,0 +1,68 @@
+﻿@model GameSite.ViewModels.RegisterModel
+
+<head>
+    <meta charset=UTF-8>
+    <title>Регистрация</title>
+</head>
+
+<body>
+
+    <div class="container" style="width:50%">
+        <form method="post" asp-controller="Account" asp-action="Register">
+            <div>
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email"></span>
+            </div>
+            <div>
+                <label asp-for="Login"></label>
+                <input asp-for="Login" class="form-control" />
+                <span asp-validation-for="Login"></span>
+            </div>
+            <div>
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name"></span>
+            </div>
+            <div>
+                <label asp-for="Surname"></label>
+                <input asp-for="Surname" class="form-control" />
+                <span asp-validation-for="Surname"></span>
+            </div>
+            <div>
+                <label asp-for="Date_of_issue"></label>
+                <input asp-for="Date_of_issue" class="form-control" />
+                <span asp-validation-for="Date_of_issue"></span>
+            </div>
+            <div>
+                <span>Выберете любимый жанр</span>
+                <select asp-for="Love_tag">
+                    <option value="Шутер">Шутер</option>
+                    <option value="Инди">Инди</option>
+                    <option value="RPG">RPG</option>
+                    <option value="MOBA">MOBA</option>
+                    <option value="Стратегия">Стратегия</option>
+                    <option value="Battle Royal">Battle Royal</option>
+                </select>
+            </div>
+            <div>
+                <label asp-for="Nickname"></label>
+                <input asp-for="Nickname" class="form-control" />
+                <span asp-validation-for="Nickname"></span>
+            </div>
+            <div>
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div>
+                <label asp-for="PasswordConfirm"></label>
+                <input asp-for="PasswordConfirm" class="form-control" />
+                <span asp-validation-for="PasswordConfirm"></span>
+            </div>
+            <div style="text-align:center; margin:5px">
+                <input type="submit" value="регистрация" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewData["Title"] = "Личный кабинет";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<body>
+    <div class="container-head">
+        <h3 class="main-text-color" style="margin: 0px; padding-top: 10px; padding-bottom:10px; padding-left:5px">Профиль участника > @ViewData["Nickname"]</h3>
+    </div>
+    <div class="">
+        <div class="row">
+            <div class="col-md-3" style="text-align:center">
+                <img src="~/images/no-avatar.jpg" class="avatar"/>
+            </div>
+            <div class="col-md-9">
+                <span>Настоящее имя: @ViewData["name"] @ViewData["Surname"]</span>
+                <br />
+                <span>Никнейм: @ViewData["Nickname"]</span>
+                <br />
+                <span>Любимый жанр: @ViewData["lt"]</span>
+                <br />
+                <span>Роль на сайте: @ViewData["Role"]</span>
+                <br />
+                <span>Email: @ViewData["email"]</span>
+            </div>
+        </div>
+    </div>
+</body>
+

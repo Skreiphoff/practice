@@ -1,0 +1,40 @@
+﻿@model GameSite.ViewModels.LoginModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <title>Вход</title>
+</head>
+<body>
+    <div class="container" style="width:50%">
+        <form method="post" asp-controller="Account" asp-action="Login"
+              asp-anti-forgery="true">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div>
+                <label asp-for="Login"></label><br />
+                <input class="form-control" asp-for="Login" />
+                <span asp-validation-for="Login"></span>
+            </div>
+            <div>
+                <label asp-for="Password"></label><br />
+                <input class="form-control" asp-for="Password" />
+                <span asp-validation-for="Password"></span>
+            </div>
+            <div style="display:inline-block">
+                <span>Remeber me</span><input asp-for="RememberMe" class="checkbox" />
+            </div>
+            <div style="text-align:center">
+                <input type="submit" value="ВХОД" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+
